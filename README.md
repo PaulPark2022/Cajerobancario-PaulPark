@@ -1,47 +1,50 @@
 # CajeroBancarioPaulPark
+
+Contexto:
+
 Este repositorio tiene como objetivo simular el comportamiento de un cajero bancario.
 
-saldo = 5000
+    saldo = 5000
 
-print("Bienvenido al CajeroBancarioTEC, seleccione una opcion: ")
+    print("Bienvenido al CajeroBancarioTEC, seleccione una opcion: ")
 
-print("a. Ingreso")
+    print("a. Ingreso")
 
-print("b. Retiro")
+    print("b. Retiro")
 
-print("c. Consulta")
+    print("c. Consulta")
 
-print("d. Salir")
+    print("d. Salir")
 
-opcion = input()
+    opcion = input()
 
 Tiene tres subalgoritmos, uno para ingresar un monto: 
 
-if opcion = "a":
+      if opcion = "a":
 
-  print("Escriba el monto que desea ingresar: ")
+      print("Escriba el monto que desea ingresar: ")
   
-  ingreso = input()
+      ingreso = input()
   
-  saldo = saldo + ingreso
+      saldo = saldo + ingreso
   
-  print("Tu saldo actual es:"), saldo
+      print("Tu saldo actual es:"), saldo
   
 Otro para retirar un monto:
   
-if opcion = "b":
+      if opcion = "b":
 
-  print("Escriba el monto que desea retirar: ")
+      print("Escriba el monto que desea retirar: ")
   
-  retiro = input()
+      retiro = input()
   
-  saldo = saldo - retiro
+      saldo = saldo - retiro
   
-  print("Tu saldo actual es:"), saldo
+      print("Tu saldo actual es:"), saldo
   
 Y un último solo para consultar el saldo actual del usuario:
 
-if opcion = "c":
+      if opcion = "c":
 
-  print("Tu saldo actual es:"), saldo
+      print("Tu saldo actual es:"), saldo
 
