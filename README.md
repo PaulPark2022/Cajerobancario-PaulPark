@@ -1,5 +1,6 @@
 # CajeroBancarioPaulPark
 Este repositorio tiene como objetivo simular el comportamiento de un cajero bancario.
+
 saldo = 5000
 
 print("Bienvenido al CajeroBancarioTEC, seleccione una opcion: ")
