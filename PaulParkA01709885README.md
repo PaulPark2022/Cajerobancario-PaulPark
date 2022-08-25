@@ -1,5 +1,5 @@
 # CajeroBancarioPaulPark
-
+# Hecho por Paul Park (01709885)
 Contexto:
 
 Este repositorio tiene como objetivo simular el comportamiento de un cajero bancario.
