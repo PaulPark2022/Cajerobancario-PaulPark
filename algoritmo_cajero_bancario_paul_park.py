@@ -12,12 +12,14 @@ def monto_retiro(resta):
   retiro = saldo - resta
   return retiro
 
+#Pantalla de inicio
 print("Bienvenido al CajeroBancarioTEC, seleccione una opcion:")
 print("a. Ingreso")
 print("b. Retiro")
 print("c. Consulta")
 print("d. Salir")
 
+#Ejecucion de todas las opciones
 opcion = input()
 if opcion == "a":
   suma_input = float(input("Escriba el monto que desea ingresar: "))
