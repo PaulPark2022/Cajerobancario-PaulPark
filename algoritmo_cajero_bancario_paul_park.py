@@ -1,5 +1,15 @@
 # CajeroBancarioPaulPark
 
+#Funcion de pantalla de inicio
+def menu_cajero():
+  print("Bienvenido al CajeroBancarioTEC, seleccione una opción: ")
+  print("a. Ingreso")
+  print("b. Retiro")
+  print("c. Consulta")
+  print("d. Salir")
+  opcion = (input("Opción --> "))
+  return opcion
+
 saldo = 5000
 suma = 0
 
@@ -23,45 +33,18 @@ dict_cajero = {
   "billetes_20": 50
 }
 
-#Pantalla de inicio
-print("Bienvenido al CajeroBancarioTEC, seleccione una opcion:")
-print("a. Ingreso")
-print("b. Retiro")
-print("c. Consulta")
-print("d. Salir")
-
 #Ejecucion de todas las opciones
-acum = 0
-while acum < 10:
-  opcion = input()
-  if opcion != "a" and opcion != "b" and opcion != "c" and opcion != "d":
-    print("Esta seleccion no es valida")
-    print("Bienvenido al CajeroBancarioTEC, seleccione una opcion:")
-    print("a. Ingreso")
-    print("b. Retiro")
-    print("c. Consulta")
-    print("d. Salir")
-  else:
+opcion = menu_cajero()
+while opcion != "d":
     if opcion == "a":
       suma_input = float(input("Escriba el monto que desea ingresar: "))
       ingreso_total = monto_ingreso(suma_input)
       print(f"Su saldo actual es {ingreso_total}")
-      acum += 1
       saldo = ingreso_total
-      print("Bienvenido al CajeroBancarioTEC, seleccione una opcion:")
-      print("a. Ingreso")
-      print("b. Retiro")
-      print("c. Consulta")
-      print("d. Salir")
-    if opcion == "b":
+    elif opcion == "b":
       resta_input = float(input("Escriba el monto que desea retirar: "))
       if resta_input > 5000:
         print("No puede retirar una cantidad mayor a su saldo")
-        print("Bienvenido al CajeroBancarioTEC, seleccione una opcion:")
-        print("a. Ingreso")
-        print("b. Retiro")
-        print("c. Consulta")
-        print("d. Salir")
       else:
         retiro_total = monto_retiro(resta_input)
         #calculo de cantidad restada al total del cajero
@@ -93,22 +76,10 @@ while acum < 10:
           suma += dict_cajero[billete]
         print (f"Quedan {suma} pesos en el cajero")
         print(f"Su saldo actual es {retiro_total}")
-        acum += 1
         saldo = retiro_total
-        print("Bienvenido al CajeroBancarioTEC, seleccione una opcion:")
-        print("a. Ingreso")
-        print("b. Retiro")
-        print("c. Consulta")
-        print("d. Salir")
-    if opcion == "c":
+    elif opcion == "c":
       print(f"Su saldo actual es {saldo}")
-      acum += 1
-      print("Bienvenido al CajeroBancarioTEC, seleccione una opcion:")
-      print("a. Ingreso")
-      print("b. Retiro")
-      print("c. Consulta")
-      print("d. Salir")
-    if opcion == "d":
-      acum += 10
-else:
-  print("Que tenga un buen día")
+    else:
+      print("Opción no válida")
+
+    opcion = menu_cajero()
