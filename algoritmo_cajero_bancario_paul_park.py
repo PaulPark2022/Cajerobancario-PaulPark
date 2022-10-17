@@ -33,6 +33,11 @@ dict_cajero = {
   "billetes_20": 50
 }
 
+#Historial de movimientos
+historial_ingresos = ["Sus ingresos anteriores fueron: "]
+historial_retiros = ["Sus retiros anteriores fueron: "]
+historial_movimientos = [historial_ingresos,historial_retiros]
+
 #Ejecucion de todas las opciones
 opcion = menu_cajero()
 while opcion != "d":
@@ -41,6 +46,7 @@ while opcion != "d":
       ingreso_total = monto_ingreso(suma_input)
       print(f"Su saldo actual es {ingreso_total}")
       saldo = ingreso_total
+      historial_ingresos.append(ingreso_total)
     elif opcion == "b":
       resta_input = float(input("Escriba el monto que desea retirar: "))
       if resta_input > 5000:
@@ -77,9 +83,12 @@ while opcion != "d":
         print (f"Quedan {suma} pesos en el cajero")
         print(f"Su saldo actual es {retiro_total}")
         saldo = retiro_total
+        historial_retiros.append(retiro_total)
     elif opcion == "c":
       print(f"Su saldo actual es {saldo}")
     else:
       print("Opción no válida")
 
     opcion = menu_cajero()
+
+    print(historial_movimientos)
